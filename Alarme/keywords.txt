@@ -1,0 +1,6 @@
+Alarme	KEYWORD1
+sensores	KEYWORD2
+sirene	KEYWORD2
+ligado	KEYWORD2
+monitoramento	KEYWORD2
+desligado	KEYWORD2
