@@ -24,7 +24,8 @@ class Alarme
 		
 	private:
 		// RETORNAR SE O ALARME FUI ACIONADO OU NÃO , TRUE - FALSE
-		boolean estado = falso;
+		boolean estado = false;
+		unsigned long time_sirene;
 };
 
 #endif

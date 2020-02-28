@@ -45,9 +45,12 @@ boolean Alarme::monitoramento(int pin3,int pin4, boolean status)
 //FUNÇÃO QUE ATIVA A SIRENE E OUTRAS OPÇÕES CASO ALARME DETECTE PRESENÇA
 void Alarme::ligado(int pin4)
 {
-	digitalWrite(pin4,HIGH);
-	Serial.println("####### ALARME LIGADO #####");
-	delay(250);
+	if(millis() - time_sirene >= 250)
+    {
+      digitalWrite(pin4, !digitalRead(pin4));
+      time_sirene = millis();
+	  Serial.println("####### ALARME LIGADO #####");
+    }
 }
 
 //FUNÇÃO QUE DESATIVA O ALARME
